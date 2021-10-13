@@ -1,0 +1,76 @@
+.sideBar
+{
+    flex: 1;
+    height: calc(100vh - 50px);
+    background-color:#ffffff;
+    position: sticky;
+    left: 0;
+    top: 50px;
+    padding-top: 15px;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar-track {
+    background: #2b0e0e;
+  }
+
+.sideBarMenu
+{
+    margin-left: 5%;
+}
+.sideBarTitle
+{
+    color: #b0b8bf;
+}
+.adminAvatarWrapper
+{
+    text-align: center;
+    margin-top: 12%;
+}
+.adminName
+{
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 5%;
+}
+.adminPosition
+{
+    font-size: 14.4px;
+    font-weight: 400;
+    color: #b0b8bf;
+}
+.adminAvatar
+{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.sideBarListItem
+{
+    color: #444444;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14.8px;
+}
+.sideBarListItem.active,.sideBarListItem:hover
+{
+    color: #71b6f9;
+}
+
+@media screen and (max-width:480px) {
+    .sideBar
+    {
+        display: none;
+    }
+    
+}
+.link
+{
+    text-decoration: none;
+}
+.link:hover
+{
+    text-decoration: none;
+}

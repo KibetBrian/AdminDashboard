@@ -1,0 +1,93 @@
+.customersContainer
+{
+    margin-left: 2%;
+    margin-top: 1%;
+}
+.CustomerProfileTitle
+{
+    font-size: 18px;
+    margin-bottom: 39px;
+    margin-top: 20px;
+}
+.clientProfileTitle
+{
+    font-size: 18px;
+    margin-bottom: 3%;
+}
+.customerImage
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.customersContact h5
+{
+    font-size: 15px;
+    font-weight: 700;
+}
+.customersContact p
+{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(152, 166, 173);
+}
+.recentTransactionsTitle
+{
+    margin-top: 20px;
+    font-size: 18px;
+}
+.recentTransactionsTable
+{
+    width: 100%;
+    margin: 20px;
+    border-collapse: separate;
+    border-spacing:0 15px;
+}
+.recentTransactionsTable tr 
+{
+    border-bottom: 1px solid rgb(108, 117, 125);
+}
+.frequentCustomersWrapper
+{
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.tableHeadings
+{
+    font-size: 14px;
+}
+.tableDataDate,.tableDataCustomerName ,.productName ,.amount
+{
+    font-weight: 300;
+    font-size: 14.4px;
+}
+
+.paymentStatusButton
+{
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    padding: 7px;
+    width: 90px;
+    background-color: transparent;
+}
+.paymentStatusButton.Approved
+{
+    background-color: #5fc56a;
+}
+.paymentStatusButton.Declined
+{
+    background-color: #e85858;;
+}
+.paymentStatusButton.Pending
+{
+    background-color: #f4c850;
+}
+.recentTransactions
+{
+    background-color: #ffffff;
+    border-radius: 5px;
+}

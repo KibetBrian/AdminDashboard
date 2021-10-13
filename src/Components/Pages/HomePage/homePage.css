@@ -1,0 +1,6 @@
+.homePage
+{
+    flex: 4;
+    background-color: #ebeff2;
+    overflow-y: scroll;
+}

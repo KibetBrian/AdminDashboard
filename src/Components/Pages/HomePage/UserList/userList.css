@@ -1,0 +1,21 @@
+.userList 
+{
+    flex: 4;
+}
+.customerContactsImage
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 30%;
+    object-fit: cover;
+}
+.addContainer
+{
+    color: rgb(16, 196, 105)
+}
+.deleteContainer
+{
+    color: #e74f4f;
+    cursor:pointer;
+}

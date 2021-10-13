@@ -1,0 +1,11 @@
+.mainBodyChart
+{
+    background-color: #ffffff;
+    margin-left: 2%;
+}
+.chartTitle
+{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}

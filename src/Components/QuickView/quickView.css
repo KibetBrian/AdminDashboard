@@ -1,0 +1,76 @@
+.quickView
+{
+    display: flex;
+    width: 100%;    
+}
+.quickViewRow
+{
+    display: flex;
+    width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+@media (max-width:480px) {
+    .quickViewItemColumn
+    {
+        margin-bottom: 1% !important;
+    }
+    .quickViewRow
+    {
+        padding-left: 4%;
+        padding-right: 0%;
+    }
+}
+@media (max-width:992px) {
+    .quickViewItemColumn
+    {
+        margin-bottom: 4% !important;
+    }
+}
+@media (min-width:1025px) {
+    .quickViewItemColumn
+    {
+        margin-bottom:4% !important;
+    }
+}
+.quickViewItemWrapper
+{
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 4%;
+    display: flex;   
+}
+.quickViewBody
+{
+    margin-top: 20%;
+}
+.quickViewTitle
+{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 17px;
+    color: #343a42;
+}
+.stats
+{
+    display: flex;
+    float: right;
+}
+.figures h2
+{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 33px;
+}
+.revenue
+{
+    color: #aaaebe;
+}
+.upwardArrow
+{
+    color: #5fc56a;
+    font-size: 15px !important;
+}
