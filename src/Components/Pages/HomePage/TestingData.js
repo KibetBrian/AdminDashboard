@@ -1,6 +1,6 @@
 export const salesData = [
     {
-        Month:'December',
+        Month:'December', 
         Sales:1800,
     },
     {

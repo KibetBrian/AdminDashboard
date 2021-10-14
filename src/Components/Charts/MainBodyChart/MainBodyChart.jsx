@@ -5,7 +5,7 @@ import { LineChart, Line, XAxis, CartesianGrid, Tooltip, Legend, ResponsiveConta
 
 function MainBodyChart({title, data, dataKey}) {
     return (
-        <div className="mainBodyChart">
+        <div className="mainBodyChart"> 
             <div className="chartTitle">{title}</div>
             <ResponsiveContainer width="100%" aspect={4 / 1}>
                 <LineChart data={data}>
