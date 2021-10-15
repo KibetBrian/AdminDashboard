@@ -27,7 +27,7 @@ const handleDelete = (id)=>
         {
             return (
                 <div>
-                    <img src={params.row.avatar} className="customerContactsImage" alt="User Image" />
+                    <img src={params.row.avatar} className="customerContactsImage" alt="UserImage" />
                     {params.row.name}
                 </div>
             )
@@ -61,7 +61,7 @@ const handleDelete = (id)=>
       },
       {
           field: 'add',
-          width: 80,
+          width: 100,
           renderCell: (params)=>
           {
               return(

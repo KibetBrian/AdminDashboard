@@ -13,7 +13,7 @@ import "./quickView.css"
 
 function QuickView() {
     const [salesData, setSalesData] = useState([]);
-    const user = useSelector((state)=>state.currentUser);
+    const user = useSelector((state)=>state.user.currentUser);
     const [customers, setCustomers] = useState(0);
     const totalCosts = 0;
     const previousRevenue = 0;

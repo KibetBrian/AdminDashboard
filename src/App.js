@@ -12,26 +12,20 @@ import UserList from "./Components/Pages/HomePage/UserList/UserList";
 import UserData from "./Components/Pages/UserDataPage/UserData";
 import NewUser from "./Components/Pages/NewUser/NewUser";
 import LoginPage from "./Components/Pages/LoginPage/LoginPage";
-import { Provider } from 'react-redux'
 import { useSelector } from 'react-redux'
-import {store, persistor} from './Redux/store'
-import { PersistGate } from 'redux-persist/es/integration/react'
-import { useState } from "react";
+import ProductPage from "./Components/Pages/ProductPage/ProductPage";
 
 function App() {
-  const localData = localStorage.getItem("persist:root");
-  const currentLocalUser = JSON.parse(localData).currentUser;
-  const currentUser = JSON.parse(currentLocalUser);
-  const user = currentUser.admin;
+  const user = useSelector(state=>state.user.currentUser);
   return (
-    <>
-    <Provider store={store}>
-      <PersistGate loading = "null" persistor={persistor}>
+    <>    
         <Router>
             <Route path="/login">
                 {user ? <Redirect to ="/" />: <LoginPage />}  
             </Route>
           {user ? <TopBar/>: <Redirect to = "login" />}
+
+          {user ?           
           <div className="sideBarAndMainContainer">
         {user ?  <SideBar/>: < Redirect to = "/login" />}
           <Switch>
@@ -41,17 +35,18 @@ function App() {
             <Route exact path="/users">
               <UserList/>
             </Route>
+            <Route exact path="/product-list">
+              <ProductPage />
+            </Route>
             <Route exact path="/users/userdata/">
               <UserData/>    
             </Route>
             <Route exact path="/users/userdata/newuser">
               <NewUser/>
-            </Route>
+            </Route>            
           </Switch>
-          </div>
-        </Router>
-      </PersistGate>
-    </Provider>
+          </div>: <Redirect to = "/login"></Redirect>}
+        </Router>      
     </>
   );
 }

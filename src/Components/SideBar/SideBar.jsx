@@ -27,7 +27,9 @@ function SideBar() {
                     <div className="sideBarTitle">Product</div>
                     <ul className="sideBarList">
                         <li className="sideBarListItem active"><Category className="mr-2"/>Category</li>
-                        <li className="sideBarListItem"><ViewList className="mr-2"/>Product List</li>
+                        <Link style={{textDecoration: 'none'}} to = "/product-list">
+                            <li className="sideBarListItem"><ViewList className="mr-2"/>Product List</li>
+                        </Link>
                         <li className="sideBarListItem"><LibraryAdd className="mr-2"/>Add Product</li>
                     </ul>
                 </div>    

@@ -5,7 +5,7 @@ const userSlice = createSlice(
         name: 'user',
         initialState: 
         {
-            currentUser: {},
+            currentUser: null,
             isFetching: false,
             error: false
         },
@@ -20,6 +20,7 @@ const userSlice = createSlice(
                 state.isFetching = false;
                 state.error = false;
                 state.currentUser = action.payload;
+                console.log(action.payload)
             },
             loginFailure: (state)=>
             {

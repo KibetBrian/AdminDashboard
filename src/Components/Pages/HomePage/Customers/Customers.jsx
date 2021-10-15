@@ -11,7 +11,7 @@ function Customers() {
     const [customers, setCustomers] = useState([]);
     const [orders, setOrders] = useState([]);
     
-    const user = useSelector(state=>state.currentUser);
+    const user = useSelector(state=>state.user.currentUser);
 
     useEffect(()=>
     {

@@ -1,20 +1,17 @@
 import React from 'react'
 import { useState } from 'react';
 import { login } from '../../../Redux/apiCall';
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import './loginPage.scss'
 
 function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const dispatch = useDispatch();
-    const currentUser = useSelector(state=>state.currentUser.admin)
     const handleFormSubmit  = (e)=>
     {
         e.preventDefault();
         login(dispatch, {email, password});
-        console.log(email, password)
-        console.log(currentUser)
     }
     return (
         <div className='loginPage'>

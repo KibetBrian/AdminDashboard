@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import MainBodyChart from '../../Charts/MainBodyChart/MainBodyChart'
 import QuickView from '../../QuickView/QuickView'
-import UserData from '../UserDataPage/UserData'
 import Customers from './Customers/Customers'
 import axios from 'axios'
 import "./homePage.css"
@@ -10,7 +9,7 @@ import { useSelector } from 'react-redux'
 
 function HomePage() {
     const [salesData, setSalesData] = useState([]);
-    const user = useSelector(state=>state.currentUser);
+    const user = useSelector(state=>state.user.currentUser);
 
     const data = [
         {
