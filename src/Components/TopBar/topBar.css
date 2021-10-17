@@ -78,6 +78,14 @@
 .topAvatarWrapper
 {
     cursor: pointer;
+    position: relative;
+}
+.dropDown
+{
+    position: absolute;
+    top: 30px;
+    width: 100px;
+    left: 30%;
 }
 
 @media(max-width:480px){

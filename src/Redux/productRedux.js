@@ -10,7 +10,48 @@ export const productSlice = createSlice(
             error: false
         },
         reducers: 
-        {
+        { 
+            //Create products
+            createProductStart: (state)=>
+            {
+                state.isFetching = true;
+                state.error = false;
+            },
+            createProductSuccess: (state, action)=>
+            {
+                state.isFetching = false;
+                state.error = false;
+                state.products.push(action.payload)
+            },
+            createProductFailure: (state) =>
+            {
+                state.error = true;
+                state.isFetching = false;
+            },
+            
+             //Update Products 
+             updateProductStart: (state)=>
+             {
+                 state.isFetching = true;
+                 state.error = false;
+             },
+             updateProductSuccess: (state, action)=>
+             {
+                 state.isFetching = false;
+                 state.error = false;
+                 state.products.forEach(eachProduct=>
+                    {
+                        if (eachProduct._id === action.payload._id)
+                        {
+                            eachProduct = action.payload
+                        }
+                    });
+             },
+             updateProductError: (state)=>
+             {
+                 state.error = true;
+             },
+
             //Fetch products
             getProductsStart: (state)=>
             {
@@ -28,6 +69,7 @@ export const productSlice = createSlice(
                 state.isFetching = false;
                 state.error = true;
             },
+
             //Delete products
             deleteProductStart: (state)=>
             {
@@ -45,9 +87,15 @@ export const productSlice = createSlice(
                 state.isFetching = false;
                 state.error= true;
             }
+            
         }
     }
 )
 
-export const { getProductsStart, getProductSuccess, getProductsError, deleteProductStart, deleteProductSuccess, deleteProductError } = productSlice.actions;
+export const {
+    createProductStart, createProductSuccess, createProductFailure,
+    getProductsStart, getProductSuccess, getProductsError,
+    updateProductStart, updateProductSuccess, updateProductError,
+    deleteProductStart, deleteProductSuccess, deleteProductError,
+     } = productSlice.actions;
 export default productSlice.reducer;

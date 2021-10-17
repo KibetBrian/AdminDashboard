@@ -30,7 +30,9 @@ function SideBar() {
                         <Link style={{textDecoration: 'none'}} to = "/product-list">
                             <li className="sideBarListItem"><ViewList className="mr-2"/>Product List</li>
                         </Link>
-                        <li className="sideBarListItem"><LibraryAdd className="mr-2"/>Add Product</li>
+                        <Link to={'/add-product'}>
+                            <li className="sideBarListItem"><LibraryAdd className="mr-2"/>Add Product</li>
+                        </Link>
                     </ul>
                 </div>    
                 <div className="sideBarMenu">

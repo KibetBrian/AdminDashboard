@@ -14,6 +14,8 @@ import NewUser from "./Components/Pages/NewUser/NewUser";
 import LoginPage from "./Components/Pages/LoginPage/LoginPage";
 import { useSelector } from 'react-redux'
 import ProductPage from "./Components/Pages/ProductPage/ProductPage";
+import ProductDetails from "./Components/Pages/ProductDetailsPage/ProductDetails";
+import AddProduct from "./Components/Pages/AddProduct/AddProduct";
 
 function App() {
   const user = useSelector(state=>state.user.currentUser);
@@ -43,7 +45,13 @@ function App() {
             </Route>
             <Route exact path="/users/userdata/newuser">
               <NewUser/>
-            </Route>            
+            </Route>
+            <Route exact path="/product/:id">
+              <ProductDetails />
+            </Route>    
+            <Route exact path="/add-product">
+              <AddProduct />
+            </Route>          
           </Switch>
           </div>: <Redirect to = "/login"></Redirect>}
         </Router>      

@@ -1,7 +1,7 @@
 import { loginFailure, loginStart, loginSuccess } from "./userSlice"
 import axios from 'axios' 
 import { store } from "./store";
-import { deleteProductError, deleteProductStart, deleteProductSuccess, getProductsError, getProductsStart, getProductSuccess } from "./productRedux";
+import { createProductFailure, createProductStart, createProductSuccess, deleteProductError, deleteProductStart, deleteProductSuccess, getProductsError, getProductsStart, getProductSuccess, updateProductStart, updateProductSuccess, updateProductError } from "./productRedux";
 //Login 
 export const login = async (dispatch, userInput)=>
 {
@@ -14,6 +14,21 @@ export const login = async (dispatch, userInput)=>
     catch(err)
     {
         dispatch(loginFailure())
+    }
+}
+//Create Products
+export const createProduct = async (dispatch, productsData)=>
+{
+    dispatch(createProductStart())
+    
+    try 
+    {
+        const createProduct = await axios.post('/products/add', productsData, {headers: {token: `Bearer ${store.getState().user.currentUser.accessToken}`}});
+        dispatch(createProductSuccess(createProduct.data));
+    }
+    catch(err)
+    {
+        dispatch(createProductFailure())
     }
 }
 //Fetch products 
@@ -31,6 +46,22 @@ export const fetchProducts = async (dispatch)=>
         dispatch(getProductsError())
     }
 }
+//Update Products
+export const updateProduct = async (dispatch,productId, productsData, accessToken)=>
+{
+    dispatch(updateProductStart)
+    
+    try 
+    {
+        const createProduct = await axios.post(`/products/update/${productId}`, productsData, {headers: {token: `Bearer ${store.getState().user.currentUser.accessToken}`}});
+        dispatch(updateProductSuccess(createProduct.data));
+    }
+    catch(err)
+    {
+        dispatch(updateProductError())
+    }
+}
+
 //DeleteProducts
 export const deleteProducts = async (dispatch, productId)=>
 {

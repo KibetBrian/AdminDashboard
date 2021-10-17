@@ -1,0 +1,148 @@
+.productDetails 
+{
+    flex: 4;
+    background-color: #ebeff2;
+    height: calc(100vh - 50px); 
+    
+    .productDetailsTitle 
+    {
+        margin-left: 20px;
+    }
+    
+    .productDetailsContainer
+    {
+        overflow: hidden;
+        height: calc(100% - 50px);
+        .productInfoTitle 
+        {
+            margin-left: 20px;
+        }
+        .productDetailsWrapper
+        {
+            display: flex;
+            height: 100%;
+            .productDetailsLeft 
+            {
+                flex: 1.5;
+                background-color: #fff;
+                margin: 0px 10px 10px 20px;
+                padding: 10px;
+                border-radius: 7px;
+                form 
+                {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    
+                    input 
+                    {
+                        border: 1px solid gray;
+                        border-radius: 6px;
+                        height: 30px;
+                    }
+                    select 
+                    {
+                        height: 30px;
+                        background-color: transparent;
+                        border: 1px solid gray;
+                        border-radius: 7px;
+                    }
+
+                    label 
+                    {
+                        margin-top: 10px;
+                    }
+                    button 
+                    {
+                        margin-top: 10px;
+                        height: 40px;
+                        background-color: #6C63FF;
+                        border: none;
+                        border-radius: 6px;
+                        color: #fff;
+                        &:active
+                        {
+                            outline: none;
+                        }
+                    }
+                    textarea 
+                    {
+                        resize: none;
+                        border: 1px solid gray;
+                        border-radius: 6px;
+                    }
+                }
+            }
+            .productDetailsRight 
+            {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+ 
+                .productDetailsRightWrapper
+                {
+                    width: 80%;
+                        .top 
+                        {
+                            background-color: #fff;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            width: 100%;
+                            padding: 20px;
+                            border-radius: 7px;
+                            .imageContainer 
+                            {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                img 
+                                {
+                                    width: 100px;
+                                    height: 100px;
+                                    object-fit: cover;
+                                }
+                            }
+                            .fileInputContainer 
+                            {
+                                margin-top: 10px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                position: relative;
+
+                                input 
+                                {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    opacity: 0;
+                                }
+                            }
+                        }
+                        .bottom 
+                        {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            width: 100%;
+                            margin-top: 20px;
+                            .inputDetailsContainer
+                            {
+                                display: flex;
+                                flex-direction: column;
+                                background-color: #fff;
+                                width: 100%;
+                                padding: 20px;
+                                border-radius: 7px;
+                            }
+                        }
+                }
+            }
+            
+        }
+    }
+}

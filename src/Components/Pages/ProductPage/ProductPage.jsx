@@ -72,7 +72,7 @@ function ProductPage() {
             {
                 return(
                     <div className="addContainer">
-                        <Link to = {"/users/"+params.row.id} >
+                        <Link to = {"/product/"+params.row.id} >
                          Edit 
                         </Link>
                          <Add className="ml-2" />
